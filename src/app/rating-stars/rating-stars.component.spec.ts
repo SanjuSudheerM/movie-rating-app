@@ -37,7 +37,7 @@ describe('RatingStarsComponent', () => {
     const length = component.elRef.nativeElement.querySelector('.rating-stars').children.length;
     expect(length).toEqual(20);
   });
-  it('should selected 6 stars', () => {
+  it('should select 6 stars', () => {
     component.rateOn = 10;
     component.id = 'movie_001';
     component.currentRating = 6;
@@ -47,7 +47,7 @@ describe('RatingStarsComponent', () => {
     fixture.detectChanges();
     expect(component.elRef.nativeElement.querySelector('#rating-star-half-movie_001-4').checked).toBeTruthy();
   });
-  it('should selected 7.8 stars', () => {
+  it('should select 7.8 stars', () => {
     component.rateOn = 10;
     component.id = 'movie_001';
     component.currentRating = 7.8;
@@ -58,7 +58,7 @@ describe('RatingStarsComponent', () => {
     expect(component.elRef.nativeElement.querySelector('#rating-star-full-movie_001-2').checked).toBeTruthy();
   });
 
-  it('should detect rating change', () => {
+  it('should checked the radio button which is denoted the current rating', () => {
     component.currentRating = 10;
     component.rateOn = 10;
     component.id = 'movie_001';
@@ -71,7 +71,7 @@ describe('RatingStarsComponent', () => {
     expect(component.elRef.nativeElement.querySelector('#rating-star-half-movie_001-0').checked).toBeTruthy();
   });
 
-  it('should detect rating change', () => {
+  it('should not checked the radio button which is not related with current rating', () => {
     component.currentRating = 10;
     component.rateOn = 8;
     component.id = 'movie_001';
@@ -85,7 +85,7 @@ describe('RatingStarsComponent', () => {
   });
 
 
-  it('should detect rating change', () => {
+  it('should update the currentRating value with changed rate value', () => {
     component.currentRating = 10;
     component.ngOnChanges({
       currentRating: new SimpleChange(null, 5, false)
