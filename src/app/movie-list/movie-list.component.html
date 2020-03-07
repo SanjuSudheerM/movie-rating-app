@@ -7,7 +7,7 @@
                     seconds</div>
                 <button class="button" *ngIf="!randomRating?.isRandomRatingEnabled" (click)="startRandomRating()">Start
                     Random Rating</button>
-                <button class="button" *ngIf="randomRating?.isRandomRatingEnabled" (click)="stopRandomRating()">Stop
+                <button class="button cancel" *ngIf="randomRating?.isRandomRatingEnabled" (click)="stopRandomRating()">Stop
                     Random Rating</button>
 
             </div>
