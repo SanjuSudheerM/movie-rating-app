@@ -1,20 +1,32 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, OnDestroy } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Movie, RandomRating } from '../types/types';
 import { environment } from 'src/environments/environment';
-import { interval } from 'rxjs';
+import { interval, Subscription } from 'rxjs';
 
 @Component({
   selector: 'app-movie-list',
   templateUrl: './movie-list.component.html',
   styleUrls: ['./movie-list.component.scss']
 })
-export class MovieListComponent implements OnInit {
+export class MovieListComponent implements OnInit, OnDestroy {
 
+  /** List of movies */
   movieList: Array<Movie> = [];
+
+  /** Handling random rating */
   randomRating: RandomRating = { isRandomRatingEnabled: false, randomInterval: 0, randomMovieIndex: 0, randomRating: 1 };
 
+  /** random rating timer */
   randomTimer: any;
+
+  /** Storing the subscriptions used */
+  subscriptions: Array<Subscription> = [];
+
+  /**
+   * Http Service
+   * @param httpService - dependency used to fetch the movies from url
+   */
   constructor(public httpService: HttpClient) { }
 
   ngOnInit() {
@@ -31,11 +43,13 @@ export class MovieListComponent implements OnInit {
    * Getting the list of movies & sorting it
    */
   getMovies() {
-    this.httpService.get(environment.getMovies).subscribe(
-      (res: { movies: [] }) => {
-        this.movieList = res.movies;
-        this.filterBasedOnRating();
-      }
+    this.subscriptions.push(
+      this.httpService.get(environment.getMovies).subscribe(
+        (res: { movies: [] }) => {
+          this.movieList = res.movies;
+          this.filterBasedOnRating();
+        }
+      )
     );
   }
 
@@ -53,6 +67,10 @@ export class MovieListComponent implements OnInit {
   }
 
 
+  /**
+   * Start random rating
+   * Generating random interval and updating the rating of random movie
+   */
   startRandomRating() {
     this.randomRating.isRandomRatingEnabled = true;
     // generating a random number within 60 and converting to milliseconds
@@ -60,13 +78,18 @@ export class MovieListComponent implements OnInit {
     this.randomRating.randomInterval = Math.floor(Math.random() * 60) * 1000;
 
     this.randomTimer = interval(this.randomRating.randomInterval);
-    this.randomTimer.subscribe(
-      (res: number) => {
-        this.updateRandomMovie();
-      }
+    this.subscriptions.push(
+      this.randomTimer.subscribe(
+        (res: number) => {
+          this.updateRandomMovie();
+        }
+      )
     );
   }
 
+  /**
+   * Generating random movie index and rating & reordering the cards if necessary
+   */
   updateRandomMovie() {
     // generating random index of the movie
     this.randomRating.randomMovieIndex = Math.floor(Math.random() * this.movieList.length);
@@ -75,7 +98,20 @@ export class MovieListComponent implements OnInit {
     this.filterBasedOnRating();
   }
 
+  /**
+   * Stop random rating
+   * unsubscribing the timer used and resetting the variables
+   */
   stopRandomRating() {
+    this.randomRating.isRandomRatingEnabled = false;
+    this.randomRating.randomMovieIndex = -1;
     this.randomTimer.unsubscribe();
+  }
+
+  /**
+   * Unsubscribing the subscriptions used
+   */
+  ngOnDestroy(): void {
+    this.subscriptions.forEach(subscription => subscription.unsubscribe());
   }
 }
