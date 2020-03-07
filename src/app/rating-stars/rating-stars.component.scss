@@ -1,0 +1,55 @@
+@import 'variables';
+.rating-stars {
+    display: flex;
+    flex-direction: row-reverse;
+    align-self: center;
+    justify-content: center;
+
+    input {
+        display: none;
+    }
+
+
+    .half-star {
+        position: relative;
+
+        &::before {
+            font-family: FontAwesome;
+            content: "\f089";
+            position: absolute;
+            left: -15px;
+            top: 5px;
+            font-size: 1.25em;
+            -webkit-transform: scaleX(-1);
+            transform: scaleX(-1);
+            z-index: 10;
+
+        }
+    }
+
+
+    .full-star {
+        position: relative;
+
+        &::before {
+            font-family: FontAwesome;
+            content: "\f005";
+            display: inline-block;
+            font-size: 1.25em;
+            margin: 5px;
+        }
+    }
+
+    input:checked~label,
+    &:not(:checked)>label:hover,
+    &:not(:checked)>label:hover~label {
+        color: var(--app-rating-star-color)
+    }
+
+    input:checked+label:hover,
+    input:checked~label:hover,
+    label:hover~input:checked~label,
+    input:checked~label:hover~label {
+        color: var(--app-rating-star-color-hover);
+    }
+}
