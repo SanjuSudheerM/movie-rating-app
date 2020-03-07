@@ -1,0 +1,239 @@
+{
+    "movies": [
+        {
+            "movieId": "MOVIE_001",
+            "title": "Joker",
+            "rating": 8.6,
+            "moviePoster": "assets/film-posters/avengers.jpg",
+            "releasedYear": 2019,
+            "category": [
+                "Crime",
+                "Drama",
+                "Thriller"
+            ],
+            "description": "In Gotham City, mentally troubled comedian Arthur Fleck is disregarded and mistreated by society. He then embarks on a downward spiral of revolution and bloody crime. This path brings him face-to-face with his alter-ego: the Joker.",
+            "cast": [
+                {
+                    "castName": "Todd Phillips",
+                    "castType": "Director",
+                    "castImage": "https://m.media-amazon.com/images/M/MV5BNGY5MWRjM2MtNDkzNC00MDcwLWE2ZjYtOWNlZmM3MWIyNGZmXkEyXkFqcGdeQXVyMTAxMjM5NTA4._V1_QL50_SY1000_SX1500_AL_.jpg"
+                },
+                {
+                    "castName": "Joaquin Phoenix",
+                    "castType": "Actor",
+                    "castImage": "https://m.media-amazon.com/images/M/MV5BZGMyY2Q4NTEtMWVkZS00NzcwLTkzNmQtYzBlMWZhZGNhMDhkXkEyXkFqcGdeQXVyNjk1MjYyNTA@._V1_QL50_.jpg"
+                },
+                {
+                    "castName": "Robert De Niro",
+                    "castType": "Actor",
+                    "castImage": "https://m.media-amazon.com/images/M/MV5BMjAwNDU3MzcyOV5BMl5BanBnXkFtZTcwMjc0MTIxMw@@._V1_QL50_.jpg"
+                }
+            ]
+        },
+        {
+            "movieId": "MOVIE_002",
+            "title": "Avengers: Endgame",
+            "rating": 8.5,
+            "moviePoster": "assets/film-posters/avengers.jpg",
+            "releasedYear": 2019,
+            "category": [
+                "Action",
+                "Adventure",
+                "Drama"
+            ],
+            "description": "After the devastating events of Avengers: Infinity War (2018), the universe is in ruins. With the help of remaining allies, the Avengers assemble once more in order to reverse Thanos' actions and restore balance to the universe.",
+            "cast": [
+                {
+                    "castName": "Anthony Russo",
+                    "castType": "Director",
+                    "castImage": "https://m.media-amazon.com/images/M/MV5BMTc2NjM5MTM0Ml5BMl5BanBnXkFtZTgwMTY3ODczNjM@._V1_QL50_SY1000_CR0,0,635,1000_AL_.jpg"
+                },
+                {
+                    "castName": "Joe Russo",
+                    "castType": "Director",
+                    "castImage": "https://m.media-amazon.com/images/M/MV5BMTc2NzY1NTY5OF5BMl5BanBnXkFtZTgwNjY3ODczNjM@._V1_QL50_SY1000_CR0,0,691,1000_AL_.jpg"
+                },
+                {
+                    "castName": "Robert Downey Jr.",
+                    "castType": "Actor",
+                    "castImage": "https://m.media-amazon.com/images/M/MV5BNzg1MTUyNDYxOF5BMl5BanBnXkFtZTgwNTQ4MTE2MjE@._V1_QL50_SY1000_CR0,0,664,1000_AL_.jpg"
+                }
+            ]
+        },
+        {
+            "movieId": "MOVIE_003",
+            "title": "The Dark Knight",
+            "rating": 9,
+            "moviePoster": "assets/film-posters/joker.jpg",
+            "releasedYear": 2008,
+            "category": [
+                "Action",
+                "Crime",
+                "Drama"
+            ],
+            "description": "When the menace known as the Joker wreaks havoc and chaos on the people of Gotham, Batman must accept one of the greatest psychological and physical tests of his ability to fight injustice.",
+            "cast": [
+                {
+                    "castName": "Christopher Nolan",
+                    "castType": "Director",
+                    "castImage": "https://m.media-amazon.com/images/M/MV5BNjE3NDQyOTYyMV5BMl5BanBnXkFtZTcwODcyODU2Mw@@._V1_UY317_CR7,0,214,317_AL__QL50.jpg"
+                },
+                {
+                    "castName": "Christian Bale",
+                    "castType": "Actor",
+                    "castImage": "https://m.media-amazon.com/images/M/MV5BMTkxMzk4MjQ4MF5BMl5BanBnXkFtZTcwMzExODQxOA@@._V1_UX214_CR0,0,214,317_AL__QL50.jpg"
+                },
+                {
+                    "castName": "Heath Ledger",
+                    "castType": "Actor",
+                    "castImage": "https://m.media-amazon.com/images/M/MV5BMTI2NTY0NzA4MF5BMl5BanBnXkFtZTYwMjE1MDE0._V1_UX214_CR0,0,214,317_AL__QL50.jpg"
+                }
+            ]
+        },
+        {
+            "movieId": "MOVIE_004",
+            "title": "The Shawshank Redemption",
+            "rating": 9.3,
+            "moviePoster": "assets/film-posters/joker.jpg",
+            "releasedYear": 1994,
+            "category": [
+                "Drama"
+            ],
+            "description": "Two imprisoned men bond over a number of years, finding solace and eventual redemption through acts of common decency.",
+            "cast": [
+                {
+                    "castName": "Frank Darabont",
+                    "castType": "Director",
+                    "castImage": "https://m.media-amazon.com/images/M/MV5BNjk0MTkxNzQwOF5BMl5BanBnXkFtZTcwODM5OTMwNA@@._V1_UY317_CR20,0,214,317_AL__QL50.jpg"
+                },
+                {
+                    "castName": "Tim Robbins",
+                    "castType": "Actor",
+                    "castImage": "https://m.media-amazon.com/images/M/MV5BMTI1OTYxNzAxOF5BMl5BanBnXkFtZTYwNTE5ODI4._V1_UY317_CR16,0,214,317_AL__QL50.jpg"
+                },
+                {
+                    "castName": "Morgan Freeman",
+                    "castType": "Actor",
+                    "castImage": "https://m.media-amazon.com/images/M/MV5BMTc0MDMyMzI2OF5BMl5BanBnXkFtZTcwMzM2OTk1MQ@@._V1_UX214_CR0,0,214,317_AL__QL50.jpg"
+                }
+            ]
+        },
+        {
+            "movieId": "MOVIE_005",
+            "title": "The Godfather",
+            "rating": 9.2,
+            "moviePoster": "assets/film-posters/joker.jpg",
+            "releasedYear": 1972,
+            "category": [
+                "Crime",
+                "Drama"
+            ],
+            "description": "The aging patriarch of an organized crime dynasty transfers control of his clandestine empire to his reluctant son.",
+            "cast": [
+                {
+                    "castName": "Francis Ford Coppola",
+                    "castType": "Director",
+                    "castImage": "https://m.media-amazon.com/images/M/MV5BMTM5NDU3OTgyNV5BMl5BanBnXkFtZTcwMzQxODA0NA@@._V1_UX214_CR0,0,214,317_AL__QL50.jpg"
+                },
+                {
+                    "castName": "Marlon Brando",
+                    "castType": "Actor",
+                    "castImage": "https://m.media-amazon.com/images/M/MV5BMTg3MDYyMDE5OF5BMl5BanBnXkFtZTcwNjgyNTEzNA@@._V1_UY317_CR97,0,214,317_AL__QL50.jpg"
+                },
+                {
+                    "castName": "Al Pacino",
+                    "castType": "Actor",
+                    "castImage": "https://m.media-amazon.com/images/M/MV5BMTQzMzg1ODAyNl5BMl5BanBnXkFtZTYwMjAxODQ1._V1_UX214_CR0,0,214,317_AL__QL50.jpg"
+                }
+            ]
+        },
+        {
+            "movieId": "MOVIE_006",
+            "title": "Inception",
+            "rating": 9.2,
+            "moviePoster": "assets/film-posters/joker.jpg",
+            "releasedYear": 2010,
+            "category": [
+                "Action",
+                "Adventure",
+                "Sci-Fi"
+            ],
+            "description": "A thief who steals corporate secrets through the use of dream-sharing technology is given the inverse task of planting an idea into the mind of a C.E.O.",
+            "cast": [
+                {
+                    "castName": "Christopher Nolan",
+                    "castType": "Director",
+                    "castImage": "https://m.media-amazon.com/images/M/MV5BNjE3NDQyOTYyMV5BMl5BanBnXkFtZTcwODcyODU2Mw@@._V1_UY317_CR7,0,214,317_AL__QL50.jpg"
+                },
+                {
+                    "castName": "Leonardo DiCaprio",
+                    "castType": "Actor",
+                    "castImage": "https://m.media-amazon.com/images/M/MV5BMjI0MTg3MzI0M15BMl5BanBnXkFtZTcwMzQyODU2Mw@@._V1_UY317_CR10,0,214,317_AL__QL50.jpg"
+                },
+                {
+                    "castName": "Joseph Gordon-Levitt",
+                    "castType": "Actor",
+                    "castImage": "https://m.media-amazon.com/images/M/MV5BZTk5ZGQ0OGQtYWYwMy00ZTE1LWE0NWUtMTQ2MmYxMWUxZWM3XkEyXkFqcGdeQXVyMjAyNzk2Nw@@._V1_UY317_CR6,0,214,317_AL__QL50.jpg"
+                }
+            ]
+        },
+        {
+            "movieId": "MOVIE_007",
+            "title": "Once Upon a Time... in Hollywood",
+            "rating": 7.7,
+            "moviePoster": "assets/film-posters/joker.jpg",
+            "releasedYear": 2019,
+            "category": [
+                "Comedy",
+                "Drama"
+            ],
+            "description": "A faded television actor and his stunt double strive to achieve fame and success in the film industry during the final years of Hollywood's Golden Age in 1969 Los Angeles.",
+            "cast": [
+                {
+                    "castName": "Quentin Tarantino",
+                    "castType": "Director",
+                    "castImage": "https://m.media-amazon.com/images/M/MV5BMTgyMjI3ODA3Nl5BMl5BanBnXkFtZTcwNzY2MDYxOQ@@._V1_UX214_CR0,0,214,317_AL__QL50.jpg"
+                },
+                {
+                    "castName": "Leonardo DiCaprio",
+                    "castType": "Actor",
+                    "castImage": "https://m.media-amazon.com/images/M/MV5BMjI0MTg3MzI0M15BMl5BanBnXkFtZTcwMzQyODU2Mw@@._V1_UY317_CR10,0,214,317_AL__QL50.jpg"
+                },
+                {
+                    "castName": "Margot Robbie",
+                    "castType": "Actress",
+                    "castImage": "https://m.media-amazon.com/images/M/MV5BMTgxNDcwMzU2Nl5BMl5BanBnXkFtZTcwNDc4NzkzOQ@@._V1_UY317_CR12,0,214,317_AL__QL50.jpg"
+                }
+            ]
+        },
+        {
+            "movieId": "MOVIE_008",
+            "title": "Captain Marvel",
+            "rating": 6.9,
+            "moviePoster": "assets/film-posters/joker.jpg",
+            "releasedYear": 2019,
+            "category": [
+                "Comedy",
+                "Drama"
+            ],
+            "description": "Carol Danvers becomes one of the universe's most powerful heroes when Earth is caught in the middle of a galactic war between two alien races.",
+            "cast": [
+                {
+                    "castName": "Anna Boden",
+                    "castType": "Director",
+                    "castImage": "https://m.media-amazon.com/images/M/MV5BMjE4NTg5ODE3NV5BMl5BanBnXkFtZTgwMTAwMzU3MzE@._V1_UY317_CR131,0,214,317_AL__QL50.jpg"
+                },
+                {
+                    "castName": "Ryan Fleck",
+                    "castType": "Director",
+                    "castImage": "https://m.media-amazon.com/images/M/MV5BMTY2ODQ1NDYxNF5BMl5BanBnXkFtZTgwOTg4MjU3MzE@._V1_UY317_CR4,0,214,317_AL__QL50.jpg"
+                },
+                {
+                    "castName": "Brie Larson",
+                    "castType": "Actress",
+                    "castImage": "https://m.media-amazon.com/images/M/MV5BMjExODkxODU3NF5BMl5BanBnXkFtZTgwNTM0MTk3NjE@._V1_UY317_CR7,0,214,317_AL__QL50.jpg"
+                }
+            ]
+        }
+    ]
+}

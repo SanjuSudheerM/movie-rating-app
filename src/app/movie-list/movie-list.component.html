@@ -1,0 +1,32 @@
+<div class="movie-list-wrapper">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-lg-3 col-md-4 col-sm-12" *ngFor="let movie of movieList; let i=index">
+                <div class="movie-card cursor-pointer">
+                    <div class="movie-card-image" [style.backgroundImage]="'url('+movie.moviePoster+')'">
+                    </div>
+                    <div class="movie-card-content">
+                        <h5>{{movie?.title}} ({{movie?.releasedYear}})</h5>
+                        <p class="light-text">Action, Drama, Love</p>
+                        <p class="small-font m-0">{{movie?.description}}</p>
+                    </div>
+                    <div class="movie-card-footer">
+                        <div class="row no-gutter">
+                            <div class="col-md-5 col-lg-5 col-sm-5">
+                                <div class="text-uppercase small-font semi-bold mb-2 light-text">Crew</div>
+                                <ul class="m-0 p-0">
+                                    <li class="cast-icon-img" *ngFor="let cast of movie.cast"
+                                        [style.backgroundImage]="'url('+cast?.castImage+')'"></li>
+                                </ul>
+                            </div>
+                            <div class="col-md-3 col-lg-3 col-sm-3 offset-lg-4">
+                                <div class="text-uppercase small-font semi-bold mb-2 light-text">Rating</div>
+                                <p class="semi-bold text-left">{{movie?.rating}}</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
