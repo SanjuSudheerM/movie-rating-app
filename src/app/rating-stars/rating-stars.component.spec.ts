@@ -130,7 +130,7 @@ describe('RatingStarsComponent', () => {
     component.rateOn = 10;
     component.generateRating();
     fixture.detectChanges();
-    fixture.debugElement.nativeElement.querySelector('#rating-star-half-Movie_004-0').nextSibling.click();
+    fixture.debugElement.nativeElement.querySelector('#rating-star-half-MOVIE_004-0').nextSibling.click();
     expect(component.currentRating).toEqual(10);
   });
 });

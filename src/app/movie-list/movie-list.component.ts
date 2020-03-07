@@ -37,4 +37,17 @@ export class MovieListComponent implements OnInit {
     );
   }
 
+  /**
+   * Update rating when user changes it
+   * @param rating - new rating
+   * @param movieIndex - selected movie index
+   */
+  getUpdatedRating(rating: number, movieIndex: number) {
+    this.movieList[movieIndex].rating = rating;
+    // keeping a second timeout for re-ordering the cards
+    setTimeout(() => {
+      this.filterBasedOnRating();
+    }, 1000);
+  }
+
 }
