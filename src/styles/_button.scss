@@ -11,4 +11,7 @@ button.button {
     &:hover {
         box-shadow: 0px 2px 9px 1px rgba(0, 0, 0, 0.3);
     }
+    &.cancel {
+        background-color: var(--app-rating-star-color);
+    }
 }
