@@ -1,15 +1,20 @@
 <div class="movie-list-wrapper">
     <div class="container-fluid">
         <div class="row">
-            <div class="col-lg-12 d-flex justify-content-end">
-                <div class="d-flex align-items-center medium-weight pr-5" *ngIf="randomRating?.isRandomRatingEnabled">Random rating has
+            <div class="col-lg-8 d-flex align-items-center">
+                <div class=" medium-weight" *ngIf="randomRating?.isRandomRatingEnabled">
+                    Random rating has
                     been initiated, Movie's rating will be randomly update in {{randomRating?.randomInterval / 1000}}
-                    seconds</div>
+                    seconds (random time)
+                </div>
+            </div>
+            <div class="col-lg-4 d-flex align-items-center justify-content-end">
+                <p class="m-0 pr-5 semi-bold" *ngIf="randomRating?.isRandomRatingEnabled">Next update in {{(randomRating?.randomInterval / 1000) - timer}}s</p>
                 <button class="button" *ngIf="!randomRating?.isRandomRatingEnabled" (click)="startRandomRating()">Start
                     Random Rating</button>
-                <button class="button cancel" *ngIf="randomRating?.isRandomRatingEnabled" (click)="stopRandomRating()">Stop
+                <button class="button cancel" *ngIf="randomRating?.isRandomRatingEnabled"
+                    (click)="stopRandomRating()">Stop
                     Random Rating</button>
-
             </div>
         </div>
         <div class="row">

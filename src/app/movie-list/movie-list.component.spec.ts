@@ -657,7 +657,7 @@ describe('MovieListComponent', () => {
     expect(component.randomRating.randomMovieIndex).toBeGreaterThan(-1);
   }));
 
-  it('should reset random rating enabled when cancel the random rating', fakeAsync(() => {
+  it('should reset the value of isRandomRatingEnabled when cancel the random rating', fakeAsync(() => {
     component.movieList = [
       {
         "movieId": "MOVIE_001",

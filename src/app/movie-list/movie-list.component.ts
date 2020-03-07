@@ -2,7 +2,7 @@ import { Component, OnInit, OnDestroy } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Movie, RandomRating } from '../types/types';
 import { environment } from 'src/environments/environment';
-import { interval, Subscription, Observable } from 'rxjs';
+import { interval, Subscription, Observable, timer } from 'rxjs';
 
 @Component({
   selector: 'app-movie-list',
@@ -22,6 +22,12 @@ export class MovieListComponent implements OnInit, OnDestroy {
 
   /** Storing the subscriptions used */
   subscriptions: Array<Subscription> = [];
+
+  /** holding timer value */
+  timer = 0;
+
+  /** timer subscription */
+  timerSubscription: Subscription;
 
   /**
    * Http Service
@@ -78,13 +84,32 @@ export class MovieListComponent implements OnInit, OnDestroy {
     this.randomRating.randomInterval = Math.floor(Math.random() * 60) * 1000;
 
     this.randomTimer = interval(this.randomRating.randomInterval);
+    this.runTimer();
     this.subscriptions.push(
       this.randomTimer.subscribe(
         (res: number) => {
           this.updateRandomMovie();
+          this.stopTimer();
+          this.runTimer();
         }
       )
     );
+  }
+
+  /**
+   * Timer
+   */
+  runTimer() {
+    this.timer = 0;
+    const timerObs = timer(0, 1000);
+    this.timerSubscription = timerObs.subscribe((res: number) => {
+      this.timer = res;
+    });
+  }
+
+  /** stopping the timer */
+  stopTimer() {
+    this.timerSubscription.unsubscribe();
   }
 
   /**
@@ -111,9 +136,10 @@ export class MovieListComponent implements OnInit, OnDestroy {
   /**
    * Unsubscribing the subscriptions used
    */
-   clearAllSubscription() {
+  clearAllSubscription() {
     this.subscriptions.forEach(subscription => subscription.unsubscribe());
-   }
+    this.stopTimer();
+  }
 
   ngOnDestroy(): void {
     this.clearAllSubscription();
