@@ -25,6 +25,11 @@
                             </div>
                         </div>
                     </div>
+                    <div class="action">
+                        <p class="text-center mb-0 small-font">Rate <span class="semi-bold">{{movie?.title}}</span></p>
+                        <app-rating-stars (getRating)="getUpdatedRating($event, i)" [currentRating]="movie?.rating"
+                            [id]="movie?.movieId"></app-rating-stars>
+                    </div>
                 </div>
             </div>
         </div>

@@ -2,6 +2,7 @@ import { async, ComponentFixture, TestBed, inject, fakeAsync } from '@angular/co
 import { MovieListComponent } from './movie-list.component';
 import { HttpClientModule } from '@angular/common/http';
 import { Movie } from '../types/types';
+import { CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 
 describe('MovieListComponent', () => {
   let component: MovieListComponent;
@@ -132,6 +133,9 @@ describe('MovieListComponent', () => {
       declarations: [MovieListComponent],
       imports: [
         HttpClientModule
+      ],
+      schemas: [
+        CUSTOM_ELEMENTS_SCHEMA
       ]
     })
       .compileComponents();
