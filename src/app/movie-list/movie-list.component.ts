@@ -29,20 +29,20 @@ export class MovieListComponent implements OnInit, OnDestroy {
    */
   constructor(public httpService: HttpClient) { }
 
-  ngOnInit() {
+  ngOnInit(): void {
     this.getMovies();
   }
   /**
    * sorting the movies in descending order based on the rating
    */
-  filterBasedOnRating() {
+  filterBasedOnRating(): void {
     this.movieList.sort((a, b) => b.rating - a.rating);
   }
 
   /**
    * Getting the list of movies & sorting it
    */
-  getMovies() {
+  getMovies(): void {
     this.subscriptions.push(
       this.httpService.get(environment.getMovies).subscribe(
         (res: { movies: [] }) => {
@@ -58,7 +58,7 @@ export class MovieListComponent implements OnInit, OnDestroy {
    * @param rating - new rating
    * @param movieIndex - selected movie index
    */
-  getUpdatedRating(rating: number, movieIndex: number) {
+  getUpdatedRating(rating: number, movieIndex: number): void {
     this.movieList[movieIndex].rating = rating;
     // keeping a second timeout for re-ordering the cards
     setTimeout(() => {
@@ -71,7 +71,7 @@ export class MovieListComponent implements OnInit, OnDestroy {
    * Start random rating
    * Generating random interval and updating the rating of random movie
    */
-  startRandomRating() {
+  startRandomRating(): void {
     this.randomRating.isRandomRatingEnabled = true;
     // generating a random number within 60 and converting to milliseconds
     // @randomInterval will be in seconds
@@ -90,7 +90,7 @@ export class MovieListComponent implements OnInit, OnDestroy {
   /**
    * Generating random movie index and rating & reordering the cards if necessary
    */
-  updateRandomMovie() {
+  updateRandomMovie(): void {
     // generating random index of the movie
     this.randomRating.randomMovieIndex = Math.floor(Math.random() * this.movieList.length);
     this.randomRating.randomRating = Math.floor(Math.random() * (environment.maximumRating * 10)) / 10;
@@ -102,7 +102,7 @@ export class MovieListComponent implements OnInit, OnDestroy {
    * Stop random rating
    * unsubscribing the timer used and resetting the variables
    */
-  stopRandomRating() {
+  stopRandomRating(): void {
     this.randomRating.isRandomRatingEnabled = false;
     this.randomRating.randomMovieIndex = -1;
     this.randomTimer.unsubscribe();

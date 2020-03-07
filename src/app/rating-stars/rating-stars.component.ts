@@ -7,12 +7,27 @@ import { environment } from '../../environments/environment';
 })
 export class RatingStarsComponent implements OnInit, OnChanges, AfterViewInit {
 
+  /** Maximum value of rating */
   rateOn = environment.maximumRating;
+
+  /** Id of the card where the rating component has been embedded */
   @Input() id: string;
+
+  /** Current Rating of the movie */
   @Input() currentRating: number;
+
+  /**
+   * Event Emitter, emitting value when user updates the rating
+   */
   @Output() getRating: EventEmitter<number>;
+
+  /** Generating the rating stars */
   rating: Array<number> = [];
 
+  /**
+   * Element reference to access the DOM Elements
+   * @param elRef - Element reference object
+   */
   constructor(public elRef: ElementRef) {
     this.getRating = new EventEmitter<number>();
   }
@@ -20,10 +35,16 @@ export class RatingStarsComponent implements OnInit, OnChanges, AfterViewInit {
   ngOnInit(): void {
     this.generateRating();
   }
+
+
   ngAfterViewInit(): void {
     this.updateRating();
   }
 
+  /**
+   * Updating the rating based on @currentRating
+   * @param changes 
+   */
   ngOnChanges(changes: SimpleChanges): void {
     if (changes.currentRating && changes.currentRating.currentValue) {
       this.currentRating = changes.currentRating.currentValue;
@@ -31,6 +52,10 @@ export class RatingStarsComponent implements OnInit, OnChanges, AfterViewInit {
     }
   }
 
+
+  /**
+   * Generating the Stars array for UI
+   */
   generateRating(): void {
     this.rating = [];
     for (let i = 0; i < this.rateOn; i++) {
@@ -38,6 +63,11 @@ export class RatingStarsComponent implements OnInit, OnChanges, AfterViewInit {
     }
   }
 
+  /**
+   * Calculating the rating selected by the user & emitting the updated rating to parent component
+   * @param index - selected star index
+   * @param type - type of selected star (FULL or HALF)
+   */
   public selectedRating(index: number, type: string): void {
     this.currentRating = (this.rateOn - index);
     if (type === 'HALF') {
@@ -46,6 +76,11 @@ export class RatingStarsComponent implements OnInit, OnChanges, AfterViewInit {
     this.getRating.emit(this.currentRating);
   }
 
+  /**
+   * Update rating
+   * constructing the possible id of the element using the @currentRating &
+   * mark the radio button as checked
+   */
   updateRating(): void {
     let rate = Math.floor(this.currentRating);
     const isHalf = this.currentRating - rate > 0 ? 'full' : 'half';
