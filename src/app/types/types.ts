@@ -14,3 +14,10 @@ export interface Cast {
     castType: string;
     castImage: string;
 }
+
+export interface RandomRating {
+    isRandomRatingEnabled: boolean;
+    randomInterval: number;
+    randomMovieIndex: number;
+    randomRating: number;
+}
