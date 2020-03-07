@@ -657,7 +657,7 @@ describe('MovieListComponent', () => {
     expect(component.randomRating.randomMovieIndex).toBeGreaterThan(-1);
   }));
 
-  it('should enable random rating while clicking on the button', fakeAsync(() => {
+  it('should reset random rating enabled when cancel the random rating', fakeAsync(() => {
     component.movieList = [
       {
         "movieId": "MOVIE_001",
@@ -749,12 +749,16 @@ describe('MovieListComponent', () => {
           }
         ]
       }];
+    component.startRandomRating();
     fixture.detectChanges();
-    fixture.debugElement.nativeElement.querySelector('button.button').click();
+    console.log(fixture.debugElement.nativeElement.querySelector('button .button'));
+
+    fixture.debugElement.nativeElement.querySelectorAll('button')[0].click();
     tick(component.randomRating.randomInterval);
     discardPeriodicTasks();
     fixture.detectChanges();
-    fixture.debugElement.nativeElement.querySelector()
-    expect(component.randomRating.randomMovieIndex).toBeGreaterThan(-1);
+    component.stopRandomRating();
+    expect(component.randomRating.randomMovieIndex).toEqual(-1);
+    expect(component.randomRating.isRandomRatingEnabled).toBeFalsy();
   }));
 });

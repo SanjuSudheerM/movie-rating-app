@@ -2,7 +2,7 @@ import { Component, OnInit, OnDestroy } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Movie, RandomRating } from '../types/types';
 import { environment } from 'src/environments/environment';
-import { interval, Subscription } from 'rxjs';
+import { interval, Subscription, Observable } from 'rxjs';
 
 @Component({
   selector: 'app-movie-list',
@@ -18,7 +18,7 @@ export class MovieListComponent implements OnInit, OnDestroy {
   randomRating: RandomRating = { isRandomRatingEnabled: false, randomInterval: 0, randomMovieIndex: 0, randomRating: 1 };
 
   /** random rating timer */
-  randomTimer: any;
+  randomTimer: Observable<number>;
 
   /** Storing the subscriptions used */
   subscriptions: Array<Subscription> = [];
@@ -105,13 +105,17 @@ export class MovieListComponent implements OnInit, OnDestroy {
   stopRandomRating(): void {
     this.randomRating.isRandomRatingEnabled = false;
     this.randomRating.randomMovieIndex = -1;
-    this.randomTimer.unsubscribe();
+    this.clearAllSubscription();
   }
 
   /**
    * Unsubscribing the subscriptions used
    */
-  ngOnDestroy(): void {
+   clearAllSubscription() {
     this.subscriptions.forEach(subscription => subscription.unsubscribe());
+   }
+
+  ngOnDestroy(): void {
+    this.clearAllSubscription();
   }
 }
