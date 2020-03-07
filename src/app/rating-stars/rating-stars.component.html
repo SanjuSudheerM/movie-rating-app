@@ -1,0 +1,8 @@
+<div class="rating-stars">
+    <ng-container *ngFor="let star of rating; let i=index">
+        <input type="radio" name="rating-{{id}}" id="rating-star-half-{{id}}-{{i}}" value="{{i+1}}">
+        <label for="rating-star-half-{{id}}-{{i}}" class="half-star" (click)="selectedRating(i, 'FULL')"></label>
+        <input type="radio" name="rating-{{id}}" id="rating-star-full-{{id}}-{{i}}" value="{{i + 0.5}}">
+        <label for="rating-star-full-{{id}}-{{i}}" class="full-star" (click)="selectedRating(i, 'HALF')"></label>
+    </ng-container>
+</div>

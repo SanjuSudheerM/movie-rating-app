@@ -4,7 +4,8 @@
 
 export const environment = {
   production: false,
-  getMovies: 'assets/data/movies.json'
+  getMovies: 'assets/data/movies.json',
+  maximumRating: 10
 };
 
 /*
