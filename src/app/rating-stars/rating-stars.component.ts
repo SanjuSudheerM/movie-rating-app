@@ -43,7 +43,7 @@ export class RatingStarsComponent implements OnInit, OnChanges, AfterViewInit {
 
   /**
    * Updating the rating based on @currentRating
-   * @param changes 
+   * @param changes
    */
   ngOnChanges(changes: SimpleChanges): void {
     if (changes.currentRating && changes.currentRating.currentValue) {
