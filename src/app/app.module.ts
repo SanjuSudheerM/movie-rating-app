@@ -8,6 +8,7 @@ import { MovieListComponent } from './movie-list/movie-list.component';
 import { HttpClientModule } from '@angular/common/http';
 import { RatingStarsComponent } from './rating-stars/rating-stars.component';
 import { ArrayListPipe } from './array-list.pipe';
+import { HomeComponent } from './home/home.component';
 
 @NgModule({
   declarations: [
@@ -15,7 +16,8 @@ import { ArrayListPipe } from './array-list.pipe';
     HeaderComponent,
     MovieListComponent,
     RatingStarsComponent,
-    ArrayListPipe
+    ArrayListPipe,
+    HomeComponent
   ],
   imports: [
     BrowserModule,

@@ -1,0 +1,22 @@
+.home-wrapper {
+    height: calc(100vh - 81px);
+    display: -webkit-box;
+    display: flex;
+    -webkit-box-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    justify-content: center;
+    background: linear-gradient(to bottom, var(--app-btn-primary-color), transparent);
+    margin: -30px;
+
+    .home-container {
+        padding: 50px;
+        height: 60vh;
+        min-height: 500px;
+        box-shadow: 0px 0px 9px 3px rgba(0, 0, 0, 0.1);
+        border-radius: 8px;
+        background: var(--app-header-branding);
+        display: flex;
+        align-items: center;
+    }
+}
