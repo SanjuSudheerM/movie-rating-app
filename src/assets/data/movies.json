@@ -4,7 +4,7 @@
             "movieId": "MOVIE_001",
             "title": "Joker",
             "rating": 8.6,
-            "moviePoster": "assets/film-posters/avengers.jpg",
+            "moviePoster": "assets/film-posters/joker.jpg",
             "releasedYear": 2019,
             "category": [
                 "Crime",
@@ -64,7 +64,7 @@
             "movieId": "MOVIE_003",
             "title": "The Dark Knight",
             "rating": 9,
-            "moviePoster": "assets/film-posters/joker.jpg",
+            "moviePoster": "assets/film-posters/dark_knight.jpg",
             "releasedYear": 2008,
             "category": [
                 "Action",
@@ -94,7 +94,7 @@
             "movieId": "MOVIE_004",
             "title": "The Shawshank Redemption",
             "rating": 9.3,
-            "moviePoster": "assets/film-posters/joker.jpg",
+            "moviePoster": "assets/film-posters/shawshank.jpg",
             "releasedYear": 1994,
             "category": [
                 "Drama"
@@ -122,7 +122,7 @@
             "movieId": "MOVIE_005",
             "title": "The Godfather",
             "rating": 9.2,
-            "moviePoster": "assets/film-posters/joker.jpg",
+            "moviePoster": "assets/film-posters/Godfather.jpg",
             "releasedYear": 1972,
             "category": [
                 "Crime",
@@ -151,7 +151,7 @@
             "movieId": "MOVIE_006",
             "title": "Inception",
             "rating": 9.2,
-            "moviePoster": "assets/film-posters/joker.jpg",
+            "moviePoster": "assets/film-posters/inception.webp",
             "releasedYear": 2010,
             "category": [
                 "Action",
@@ -181,7 +181,7 @@
             "movieId": "MOVIE_007",
             "title": "Once Upon a Time... in Hollywood",
             "rating": 7.7,
-            "moviePoster": "assets/film-posters/joker.jpg",
+            "moviePoster": "assets/film-posters/onceuponatime.jpg",
             "releasedYear": 2019,
             "category": [
                 "Comedy",
@@ -210,7 +210,7 @@
             "movieId": "MOVIE_008",
             "title": "Captain Marvel",
             "rating": 6.9,
-            "moviePoster": "assets/film-posters/joker.jpg",
+            "moviePoster": "assets/film-posters/captain_marvel.jpg",
             "releasedYear": 2019,
             "category": [
                 "Comedy",
@@ -232,6 +232,186 @@
                     "castName": "Brie Larson",
                     "castType": "Actress",
                     "castImage": "https://m.media-amazon.com/images/M/MV5BMjExODkxODU3NF5BMl5BanBnXkFtZTgwNTM0MTk3NjE@._V1_UY317_CR7,0,214,317_AL__QL50.jpg"
+                }
+            ]
+        },
+        {
+            "movieId": "MOVIE_009",
+            "title": "Escape Room",
+            "rating": 6.3,
+            "moviePoster": "assets/film-posters/escape-room.jpg",
+            "releasedYear": 2019,
+            "category": [
+                "Action",
+                "Adventure",
+                "Horror"
+            ],
+            "description": "Six strangers find themselves in a maze of deadly mystery rooms and must use their wits to survive.",
+            "cast": [
+                {
+                    "castName": "Adam Robitel",
+                    "castType": "Director",
+                    "castImage": "https://m.media-amazon.com/images/M/MV5BNjlhMGFhYmQtOGZlMS00ZjE2LThiZjMtNzYxZTU2MmNmOWI3XkEyXkFqcGdeQXVyMjQwMDg0Ng@@._V1_UY317_CR52,0,214,317_AL__QL50.jpg"
+                },
+                {
+                    "castName": "Taylor Russell",
+                    "castType": "Actress",
+                    "castImage": "https://m.media-amazon.com/images/M/MV5BYWYyNDcwNGQtNTQ1MS00YjZmLWJjYTYtZmU2YTZkOGJhMjkyXkEyXkFqcGdeQXVyMzcyMzAzNzk@._V1_UY317_CR35,0,214,317_AL__QL50.jpg"
+                },
+                {
+                    "castName": "Logan Miller",
+                    "castType": "Actor",
+                    "castImage": "https://m.media-amazon.com/images/M/MV5BMTUzOTM2NTY2N15BMl5BanBnXkFtZTgwODAwMTczODE@._V1_UX214_CR0,0,214,317_AL__QL50.jpg"
+                }
+            ]
+        },
+        {
+            "movieId": "MOVIE_010",
+            "title": "Shazam!",
+            "rating": 7.1,
+            "moviePoster": "assets/film-posters/shazam.jpg",
+            "releasedYear": 2019,
+            "category": [
+                "Action",
+                "Adventure",
+                "Comedy"
+            ],
+            "description": "A newly fostered young boy in search of his mother instead finds unexpected super powers and soon gains a powerful enemy.",
+            "cast": [
+                {
+                    "castName": "David F. Sandberg",
+                    "castType": "Director",
+                    "castImage": "https://m.media-amazon.com/images/M/MV5BNTc0MDI1ODk2N15BMl5BanBnXkFtZTgwNzIzMjIxNzE@._V1_UX214_CR0,0,214,317_AL__QL50.jpg"
+                },
+                {
+                    "castName": "Zachary Levi",
+                    "castType": "Actor",
+                    "castImage": "https://m.media-amazon.com/images/M/MV5BMTU5NjEwOTgwMF5BMl5BanBnXkFtZTgwOTEzMDk1NTM@._V1_UX214_CR0,0,214,317_AL__QL50.jpg"
+                },
+                {
+                    "castName": "Mark Strong",
+                    "castType": "Actor",
+                    "castImage": "https://m.media-amazon.com/images/M/MV5BMmFlZDEyZTctNTZkZi00YjI1LWEyNTMtYWNhMTBiZTEwYTUyXkEyXkFqcGdeQXVyMDQxMDEwMw@@._V1_UY317_CR17,0,214,317_AL__QL50.jpg"
+                }
+            ]
+        },
+        {
+            "movieId": "MOVIE_011",
+            "title": "Spider-Man: Far from Home",
+            "rating": 7.5,
+            "moviePoster": "assets/film-posters/spiderman.jpg",
+            "releasedYear": 2019,
+            "category": [
+                "Action",
+                "Adventure",
+                "Comedy"
+            ],
+            "description": "Following the events of Avengers: Endgame (2019), Spider-Man must step up to take on new threats in a world that has changed forever.",
+            "cast": [
+                {
+                    "castName": "Jon Watts",
+                    "castType": "Director",
+                    "castImage": "https://m.media-amazon.com/images/M/MV5BNzg2NjA5ODAyMV5BMl5BanBnXkFtZTgwODAzMjkxNDE@._V1_UX214_CR0,0,214,317_AL__QL50.jpg"
+                },
+                {
+                    "castName": "Tom Holland",
+                    "castType": "Actor",
+                    "castImage": "https://m.media-amazon.com/images/M/MV5BNTAzMzA3NjQwOF5BMl5BanBnXkFtZTgwMDUzODQ5MTI@._V1_UY317_CR23,0,214,317_AL__QL50.jpg"
+                },
+                {
+                    "castName": "Samuel L. Jackson",
+                    "castType": "Actor",
+                    "castImage": "https://m.media-amazon.com/images/M/MV5BMTQ1NTQwMTYxNl5BMl5BanBnXkFtZTYwMjA1MzY1._V1_UX214_CR0,0,214,317_AL__QL50.jpg"
+                }
+            ]
+        },
+        {
+            "movieId": "MOVIE_012",
+            "title": "It Chapter Two",
+            "rating": 6.6,
+            "moviePoster": "assets/film-posters/it.jpg",
+            "releasedYear": 2019,
+            "category": [
+                "Drama",
+                "Fantasy",
+                "Horror"
+            ],
+            "description": "Twenty-seven years after their first encounter with the terrifying Pennywise, the Losers Club have grown up and moved away, until a devastating phone call brings them back.",
+            "cast": [
+                {
+                    "castName": "Andy Muschietti",
+                    "castType": "Director",
+                    "castImage": "https://m.media-amazon.com/images/M/MV5BMTkwMDE0NTc0NF5BMl5BanBnXkFtZTcwNTcyMTM5OA@@._V1_UY317_CR1,0,214,317_AL__QL50.jpg"
+                },
+                {
+                    "castName": "Jessica Chastain",
+                    "castType": "Actor",
+                    "castImage": "https://m.media-amazon.com/images/M/MV5BMTU1MDM5NjczOF5BMl5BanBnXkFtZTcwOTY2MDE4OA@@._V1_UX214_CR0,0,214,317_AL__QL50.jpg"
+                },
+                {
+                    "castName": "Jessica Chastain",
+                    "castType": "Actor",
+                    "castImage": "https://m.media-amazon.com/images/M/MV5BMTQzNzIxOTYzMl5BMl5BanBnXkFtZTcwNjYxNTk1Nw@@._V1_UY317_CR14,0,214,317_AL__QL50.jpg"
+                }
+            ]
+        },
+        {
+            "movieId": "MOVIE_013",
+            "title": "Yesterday",
+            "rating": 6.9,
+            "moviePoster": "assets/film-posters/yesterday.jpg",
+            "releasedYear": 2019,
+            "category": [
+                "Comedy",
+                "Fantasy",
+                "Music"
+            ],
+            "description": "A struggling musician realizes he's the only person on Earth who can remember The Beatles after waking up in an alternate timeline where they never existed.",
+            "cast": [
+                {
+                    "castName": "Danny Boyle",
+                    "castType": "Director",
+                    "castImage": "https://m.media-amazon.com/images/M/MV5BMTc2NTU0ODQ0M15BMl5BanBnXkFtZTcwNjYzMzc5Mg@@._V1_UY317_CR10,0,214,317_AL__QL50.jpg"
+                },
+                {
+                    "castName": "Himesh Patel",
+                    "castType": "Actor",
+                    "castImage": "https://m.media-amazon.com/images/M/MV5BNzYzN2NhMjYtYWJhYS00NjkxLWEzM2UtMzRhNThmMzhiNGEwXkEyXkFqcGdeQXVyOTM3ODc5OTU@._V1_UY317_CR20,0,214,317_AL__QL50.jpg"
+                },
+                {
+                    "castName": "Lily James",
+                    "castType": "Actor",
+                    "castImage": "https://m.media-amazon.com/images/M/MV5BMTgxMjM2NTAyMV5BMl5BanBnXkFtZTgwOTU4NjU2NDE@._V1_UX214_CR0,0,214,317_AL__QL50.jpg"
+                }
+            ]
+        },
+        {
+            "movieId": "MOVIE_014",
+            "title": "Glass",
+            "rating": 6.7,
+            "moviePoster": "assets/film-posters/glass.jpg",
+            "releasedYear": 2019,
+            "category": [
+                "Drama",
+                "Sci-Fi",
+                "Thriller"
+            ],
+            "description": "Security guard David Dunn uses his supernatural abilities to track Kevin Wendell Crumb, a disturbed man who has twenty-four personalities.",
+            "cast": [
+                {
+                    "castName": "M. Night Shyamalan",
+                    "castType": "Director",
+                    "castImage": "https://m.media-amazon.com/images/M/MV5BMTczMTA5OTMxMl5BMl5BanBnXkFtZTcwMDA4NDg1Mw@@._V1_UY317_CR131,0,214,317_AL__QL50.jpg"
+                },
+                {
+                    "castName": "James McAvoy",
+                    "castType": "Actor",
+                    "castImage": "https://m.media-amazon.com/images/M/MV5BMTQzNzIxOTYzMl5BMl5BanBnXkFtZTcwNjYxNTk1Nw@@._V1_UY317_CR14,0,214,317_AL__QL50.jpg"
+                },
+                {
+                    "castName": "Bruce Willis",
+                    "castType": "Actor",
+                    "castImage": "https://m.media-amazon.com/images/M/MV5BMjA0MjMzMTE5OF5BMl5BanBnXkFtZTcwMzQ2ODE3Mw@@._V1_UY317_CR27,0,214,317_AL__QL50.jpg"
                 }
             ]
         }
